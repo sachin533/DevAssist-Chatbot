@@ -1,0 +1,26 @@
+{
+  "name": "phonebook-app",
+  "version": "1.0.0",
+  "description": "Classic CRUD Phonebook — Node.js Express JSON API + SQL Server Express (mssql + Stored Procedures) + Vue.js SPA",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "install:all": "npm install && npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "setup:db": "sqlcmd -S \".\\SQLEXPRESS\" -E -i sql\\schema.sql"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mssql": "^10.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
